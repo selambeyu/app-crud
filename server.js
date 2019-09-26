@@ -44,7 +44,7 @@
 const express=require('express');
 require('./server/config/connection');
 
-
+var userRouter=require('./server/routes/user')
 
 const http=require('http');
 const app=express();
@@ -52,6 +52,7 @@ const port=process.env.PORT || '8080';
 var server=http.createServer(app)
 
 app.set('port',port);
+app.use('/api/users'.userRouter);
 server.listen(port,()=>{
   console.log(`the server is running on port ${port}`);
 })
