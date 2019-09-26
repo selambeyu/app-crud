@@ -42,9 +42,13 @@
 
 
 const express=require('express');
+require('./server/config/connection');
+
+
+
 const http=require('http');
 const app=express();
-const port=process.env.PORT || '8000';
+const port=process.env.PORT || '8080';
 var server=http.createServer(app)
 
 app.set('port',port);
