@@ -35,5 +35,3 @@ router.delete('/delete', user.delete);
 
 module.exports = router;
 
-. └── server/controller/user.js
-
