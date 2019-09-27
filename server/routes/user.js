@@ -7,31 +7,28 @@ router.get('/', function (req, res, next) {
 });
 
 /**
- **_ To create the New user
- _**/
+ * To create the New user
+ */
 router.post('/', user.create);
 
 /**
- _ TO get the single user by their username eg.email
- _/
-
-
+ * TO get the single user by their username eg.email
+ */
 router.get('/user/:username', user.find);
 
 /**
- **_ To update user data(fields) by user ID
- _**/
+ * To update user data(fields) by user ID
+ */
 router.put('/updatebyid', user.updateById);
 
 /**
- _ To update the user data by filter condition
- _/
+ * To update the user data by filter condition
+ */
 router.put('/update', user.update);
 
-/_*
- _ To delete the user by condition
+/**
+ * To delete the user by condition
  */
 router.delete('/delete', user.delete);
 
 module.exports = router;
-
